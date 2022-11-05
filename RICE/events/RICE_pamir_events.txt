@@ -32,26 +32,38 @@ pamir.0001 = {
 		scope:pamir_puteshan_king = {
 			get_title = title:c_badakhshan
 			get_title = title:c_munjan
-			add_gold = 25
+			RICE_setup_new_granted_ruler_bonuses_effect = yes
 			RICE_generate_small_family_as_ruler = { CHARACTER = scope:pamir_puteshan_king }
+
+			# Can't use jizya because Maturidi don't have the jizya doctrine
+			RICE_no_conversion_contract_at_start_effect = yes
 		}
 		scope:pamir_wakhanshah_king = {
 			save_scope_as = pamir_wakhanshah_king
 			get_title = title:c_wakhan
-			add_gold = 25
+			RICE_setup_new_granted_ruler_bonuses_effect = yes
 			RICE_generate_small_family_as_ruler = { CHARACTER = scope:pamir_wakhanshah_king }
+
+			# Can't use jizya because Maturidi don't have the jizya doctrine
+			RICE_no_conversion_contract_at_start_effect = yes
 		}
 		scope:pamir_shugnanshah_king = {
 			save_scope_as = pamir_shugnanshah_king
 			get_title = title:c_shughnan
-			add_gold = 25
+			RICE_setup_new_granted_ruler_bonuses_effect = yes
 			RICE_generate_small_family_as_ruler = { CHARACTER = scope:pamir_shugnanshah_king }
+
+			# Can't use jizya because Maturidi don't have the jizya doctrine
+			RICE_no_conversion_contract_at_start_effect = yes
 		}
 		scope:pamir_shugnanshah_king_2 = {
 			save_scope_as = pamir_shugnanshah_king_2
 			get_title = title:c_karran
-			add_gold = 25
+			RICE_setup_new_granted_ruler_bonuses_effect = yes
 			RICE_generate_small_family_as_ruler = { CHARACTER = scope:pamir_shugnanshah_king_2 }
+
+			# Can't use jizya because Maturidi don't have the jizya doctrine
+			RICE_no_conversion_contract_at_start_effect = yes
 		}
 	}
 }
@@ -88,7 +100,7 @@ pamir.0003 = {
 	#left_portrait = root
 	
 	immediate = {
-		add_gold = 50
+		RICE_setup_new_granted_ruler_bonuses_effect = yes
 		get_title = title:c_badakhshan
 		get_title = title:c_munjan
 		get_title = title:c_wakhan
@@ -96,8 +108,20 @@ pamir.0003 = {
 		get_title = title:c_karran
 		get_title = title:d_badakhshan
 		RICE_generate_small_family = { CHARACTER = scope:ali_ibn_asad }
-		#set_relation_friend = scope:nasir_khusraw
 		add_courtier = scope:nasir_khusraw
+
+		create_title_and_vassal_change = {
+			type = independency
+			save_scope_as = going_independent
+			add_claim_on_loss = no
+		}
+		scope:ali_ibn_asad = {
+			becomes_independent = {
+				change = scope:going_independent
+			}
+		}
+		resolve_title_and_vassal_change = scope:going_independent	
+
 		trigger_event = { # Give Ali ibn Asad the modifiers and choose his religion IF he is AI
 			id = pamir.0010
 			days = 1
@@ -1465,7 +1489,7 @@ pamir.0033 = {
 	
 	option = { # Small
 		name = pamir.0033.a
-		remove_short_term_gold = 80
+		remove_short_term_gold = RICE_pamir_watchtower_small_cost_value
 		title:c_wakhan = {
 			add_county_modifier = {
 				modifier = RICE_pamir_wakhan_recently_repaired_small
@@ -1475,7 +1499,13 @@ pamir.0033 = {
 	}	
 	option = { # Medium
 		name = pamir.0033.b
-		remove_short_term_gold = 150
+		trigger = {
+			OR = {
+				is_ai = no
+				gold >= RICE_pamir_watchtower_medium_cost_value
+			}
+		}
+		remove_short_term_gold = RICE_pamir_watchtower_medium_cost_value
 		title:c_wakhan = {
 			add_county_modifier = {
 				modifier = RICE_pamir_wakhan_recently_repaired_medium
@@ -1485,7 +1515,13 @@ pamir.0033 = {
 	}	
 	option = { # Large
 		name = pamir.0033.c
-		remove_short_term_gold = 270
+		trigger = {
+			OR = {
+				is_ai = no
+				gold >= RICE_pamir_watchtower_large_cost_value
+			}
+		}
+		remove_short_term_gold = RICE_pamir_watchtower_large_cost_value
 		title:c_wakhan = {
 			add_county_modifier = {
 				modifier = RICE_pamir_wakhan_recently_repaired_large
@@ -1506,7 +1542,7 @@ pamir.0034 = {
 	
 	option = { # Small
 		name = pamir.0033.a
-		remove_short_term_gold = 80
+		remove_short_term_gold = RICE_pamir_watchtower_small_cost_value
 		title:c_gilgit = {
 			add_county_modifier = {
 				modifier = RICE_pamir_karakoram_recently_repaired_small
@@ -1516,7 +1552,13 @@ pamir.0034 = {
 	}	
 	option = { # Medium
 		name = pamir.0033.b
-		remove_short_term_gold = 150
+		trigger = {
+			OR = {
+				is_ai = no
+				gold >= RICE_pamir_watchtower_medium_cost_value
+			}
+		}
+		remove_short_term_gold = RICE_pamir_watchtower_medium_cost_value
 		title:c_gilgit = {
 			add_county_modifier = {
 				modifier = RICE_pamir_karakoram_recently_repaired_medium
@@ -1526,7 +1568,13 @@ pamir.0034 = {
 	}	
 	option = { # Large
 		name = pamir.0033.c
-		remove_short_term_gold = 270
+		trigger = {
+			OR = {
+				is_ai = no
+				gold >= RICE_pamir_watchtower_large_cost_value
+			}
+		}
+		remove_short_term_gold = RICE_pamir_watchtower_large_cost_value
 		title:c_gilgit = {
 			add_county_modifier = {
 				modifier = RICE_pamir_karakoram_recently_repaired_large
@@ -3939,7 +3987,10 @@ pamir.0112 = {
 			title:c_badakhshan.holder = {
 				save_scope_as = nasir_khusraw_buddy
 				RICE_pamir_spawn_nasir_khusraw_effect = yes
-				set_relation_friend = scope:nasir_khusraw
+				set_relation_friend = {
+					target = scope:nasir_khusraw
+					reason = RICE_friend_reason_placeholder
+				}
 			}
 		}
 		else_if = {
@@ -3954,7 +4005,10 @@ pamir.0112 = {
 			title:c_munjan.holder = {
 				save_scope_as = nasir_khusraw_buddy
 				RICE_pamir_spawn_nasir_khusraw_effect = yes
-				set_relation_friend = scope:nasir_khusraw
+				set_relation_friend = {
+					target = scope:nasir_khusraw
+					reason = RICE_friend_reason_placeholder
+				}
 			}
 		}
 		else_if = {
@@ -3969,7 +4023,10 @@ pamir.0112 = {
 			title:c_wakhan.holder = {
 				save_scope_as = nasir_khusraw_buddy
 				RICE_pamir_spawn_nasir_khusraw_effect = yes
-				set_relation_friend = scope:nasir_khusraw
+				set_relation_friend = {
+					target = scope:nasir_khusraw
+					reason = RICE_friend_reason_placeholder
+				}
 			}
 		}
 		else_if = {
@@ -3984,7 +4041,10 @@ pamir.0112 = {
 			title:c_shughnan.holder = {
 				save_scope_as = nasir_khusraw_buddy
 				RICE_pamir_spawn_nasir_khusraw_effect = yes
-				set_relation_friend = scope:nasir_khusraw
+				set_relation_friend = {
+					target = scope:nasir_khusraw
+					reason = RICE_friend_reason_placeholder
+				}
 			}
 		}
 		else_if = {
@@ -3999,7 +4059,10 @@ pamir.0112 = {
 			title:c_karran.holder = {
 				save_scope_as = nasir_khusraw_buddy
 				RICE_pamir_spawn_nasir_khusraw_effect = yes
-				set_relation_friend = scope:nasir_khusraw
+				set_relation_friend = {
+					target = scope:nasir_khusraw
+					reason = RICE_friend_reason_placeholder
+				}
 			}
 		}
 		every_player = {

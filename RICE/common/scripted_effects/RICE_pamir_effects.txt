@@ -17,15 +17,7 @@
 	# }
 
 	# Move to Khotan/Sogdian/Tarim Basin/Dunhuang/Tocharian Flavor Pack in the future
-	culture:saka = {
-		set_culture_pillar = ethos_bureaucratic
-		add_culture_tradition = tradition_language_scholars # Translators
-		remove_variable = tradition_cooldown
-	}
-	culture:tocharian = {
-		add_culture_tradition = tradition_music_theory # Kuchean music is famous
-		remove_variable = tradition_cooldown
-	}
+
 	
 	# Below is based on Encyclopedia Iranica, citing Mahmud Kashgari who lived in the 11th century during the 1066 start date, so should be considered accurate enough for game purposes
 	if = {
@@ -80,40 +72,69 @@
 			current_date > 700.1.1
 		}
 		title:c_west-tokharestan = {
-			set_county_culture = culture:hephthalite
+			set_county_culture = culture:turco_hephthalite
 		}	
 		title:c_east-tokharestan = {
-			set_county_culture = culture:hephthalite
+			set_county_culture = culture:turco_hephthalite
 		}	
 		title:c_zamindawar = {
-			set_county_culture = culture:hephthalite
+			set_county_culture = culture:turco_hephthalite
 		}	
 		title:c_zabulistan = {
-			set_county_culture = culture:hephthalite
+			set_county_culture = culture:turco_hephthalite
 		}
 		# title:c_bost = {
-		# 	set_county_culture = culture:hephthalite
+		# 	set_county_culture = culture:turco_hephthalite
 		# }
 		# title:c_rukhaj = {
-		# 	set_county_culture = culture:hephthalite
+		# 	set_county_culture = culture:turco_hephthalite
 		# }
 	}
+
+	if = {
+		limit = {
+			NOT = { has_global_variable = RICE_game_started_on_TFE_start_date }
+		}
 	
-	#title:c_badakhshan = {
-	#	set_county_culture = culture:pamiri
-	#}		
-	#title:c_munjan = {
-	#	set_county_culture = culture:pamiri
-	#}		
-	#title:c_wakhan = {
-	#	set_county_culture = culture:pamiri
-	#}		
-	#title:c_shughnan = {
-	#	set_county_culture = culture:pamiri
-	#}		
-	#title:c_karran = {
-	#	set_county_culture = culture:pamiri
-	#}
+		title:c_badakhshan = {
+			set_county_culture = culture:pamiri
+		}		
+		title:c_munjan = {
+			set_county_culture = culture:pamiri
+		}		
+		title:c_wakhan = {
+			set_county_culture = culture:pamiri
+		}		
+		title:c_shughnan = {
+			set_county_culture = culture:pamiri
+		}		
+		title:c_karran = {
+			set_county_culture = culture:pamiri
+		}
+		
+		culture:hephthalite = {
+			add_culture_tradition = tradition_RICE_white_huns # White Huns
+			remove_variable = tradition_cooldown
+		}
+	
+		culture:turco_hephthalite = {
+			add_culture_tradition = tradition_RICE_white_huns # White Huns
+			remove_variable = tradition_cooldown
+		}
+	}
+
+	culture:pamiri = {
+		add_culture_tradition = tradition_RICE_beyond_the_reach_of_eagles
+		remove_variable = tradition_cooldown
+	}
+	culture:burusho = {
+		add_culture_tradition = tradition_RICE_beyond_the_reach_of_eagles
+		remove_variable = tradition_cooldown
+	}
+	culture:nuristani = {
+		add_culture_tradition = tradition_RICE_beyond_the_reach_of_eagles
+		remove_variable = tradition_cooldown
+	}
 	
 	############################################################
 	#
@@ -341,88 +362,88 @@
 			NOT = { has_global_variable = RICE_game_started_on_TFE_start_date }
 		}
 		character:188700 ={
-			set_culture = culture:hephthalite
+			set_culture = culture:turco_hephthalite
 		}
 		character:188701 ={
-			set_culture = culture:hephthalite
+			set_culture = culture:turco_hephthalite
 		}
 		character:188702 ={
-			set_culture = culture:hephthalite
+			set_culture = culture:turco_hephthalite
 		}
 		character:188703 ={
-			set_culture = culture:hephthalite
+			set_culture = culture:turco_hephthalite
 		}
 		character:188628 ={
-			set_culture = culture:hephthalite
+			set_culture = culture:turco_hephthalite
 		}
 		character:188705 ={
-			set_culture = culture:hephthalite
+			set_culture = culture:turco_hephthalite
 		}
 		character:188706 ={
-			set_culture = culture:hephthalite
+			set_culture = culture:turco_hephthalite
 		}
 		character:188707 ={
-			set_culture = culture:hephthalite
+			set_culture = culture:turco_hephthalite
 		}
 		character:188708 ={
-			set_culture = culture:hephthalite
+			set_culture = culture:turco_hephthalite
 		}
 		character:188709 ={
-			set_culture = culture:hephthalite
+			set_culture = culture:turco_hephthalite
 		}
 		character:188710 ={
-			set_culture = culture:hephthalite
+			set_culture = culture:turco_hephthalite
 		}
 		character:188711 ={
-			set_culture = culture:hephthalite
+			set_culture = culture:turco_hephthalite
 		}
 		character:188712 ={
-			set_culture = culture:hephthalite
+			set_culture = culture:turco_hephthalite
 		}
 		character:188713 ={
-			set_culture = culture:hephthalite
+			set_culture = culture:turco_hephthalite
 		}
 		character:188714 ={
-			set_culture = culture:hephthalite
+			set_culture = culture:turco_hephthalite
 		}
 		character:188715 ={
-			set_culture = culture:hephthalite
+			set_culture = culture:turco_hephthalite
 		}
 		character:188716 ={
-			set_culture = culture:hephthalite
+			set_culture = culture:turco_hephthalite
 		}
 		character:188717 ={
-			set_culture = culture:hephthalite
+			set_culture = culture:turco_hephthalite
 		}
 		character:188718 ={
-			set_culture = culture:hephthalite
+			set_culture = culture:turco_hephthalite
 		}
 		character:188719 ={
-			set_culture = culture:hephthalite
+			set_culture = culture:turco_hephthalite
 		}
 		character:188720 ={
-			set_culture = culture:hephthalite
+			set_culture = culture:turco_hephthalite
 		}
 		character:188721 ={
-			set_culture = culture:hephthalite
+			set_culture = culture:turco_hephthalite
 		}
 		character:188722 ={
-			set_culture = culture:hephthalite
+			set_culture = culture:turco_hephthalite
 		}
 		character:188723 ={
-			set_culture = culture:hephthalite
+			set_culture = culture:turco_hephthalite
 		}
 		character:188724 ={
-			set_culture = culture:hephthalite
+			set_culture = culture:turco_hephthalite
 		}
 		character:188565 ={
-			set_culture = culture:hephthalite
+			set_culture = culture:turco_hephthalite
 		}
 		character:188566 ={
-			set_culture = culture:hephthalite
+			set_culture = culture:turco_hephthalite
 		}
 		character:188567 ={
-			set_culture = culture:hephthalite
+			set_culture = culture:turco_hephthalite
 		}
 	}
 	
@@ -565,9 +586,8 @@
 			#get_title = title:c_gilgit
 			get_title = title:c_yasin
 			get_title = title:c_golaghmuli
-			add_gold = 50
-			add_piety = 100
-			add_prestige = 100
+			get_title = title:c_chitral
+			RICE_setup_new_granted_ruler_bonuses_effect = yes
 			dynasty = { add_dynasty_prestige = 1000 }
 		}
 		# Ali ibn Asad, Nasir Khusraw's friend
@@ -628,6 +648,8 @@
 			}
 		}
 	}
+
+
 	
 	############################################################
 	#
@@ -1332,7 +1354,10 @@ RICE_pamir_renovate_shri_badats_palace_effect = {
 			save_scope_as = nur_bakht
 		}
 		remove_relation_soulmate = scope:nur_bakht
-		set_relation_rival = scope:nur_bakht
+		set_relation_rival = {
+			target = scope:nur_bakht
+			reason = RICE_rival_reason_placeholder
+		}
 	}
 	if = {
 		limit = {
@@ -1345,7 +1370,10 @@ RICE_pamir_renovate_shri_badats_palace_effect = {
 			save_scope_as = jataylotu
 		}
 		remove_relation_friend = scope:jataylotu
-		set_relation_rival = scope:jataylotu
+		set_relation_rival = {
+			target = scope:jataylotu
+			reason = RICE_rival_reason_placeholder
+		}
 	}
 	if = {
 		limit = {
@@ -1403,7 +1431,7 @@ RICE_pamir_restore_hephthalite_effect = {
 		}
 		add_trait = RICE_hephthalite_emperor_shah
 	}
-	dynasty = { add_dynasty_prestige = 2000 }
+	dynasty = { add_dynasty_prestige = 1000 }
 	if = {
 		limit = {
 			religion = religion:zunism_religion
@@ -1577,7 +1605,7 @@ RICE_pamir_reclaim_hephthalite_homeland_effect = {
 		}
 	}
 
-	dynasty = { add_dynasty_prestige = 1000 }
+	dynasty = { add_dynasty_prestige = 500 }
 
 	
 

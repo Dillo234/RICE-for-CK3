@@ -53,8 +53,13 @@ RICE_setup_on_actions = {
 		RICE_setup_guanche_flavor_pack_effect = yes			# The Fortunate Isles				12/16/21
 		RICE_setup_yazd_flavor_pack_effect = yes			# Abode of Worship					01/10/22
 		RICE_setup_magadha_flavor_pack_effect = yes			# Diamond Throne of Buddhism		02/08/22
-		RICE_setup_rhodes_flavor_pack_effect = yes			# Shadow of the Colossus			03/??/22
-		RICE_setup_upper_egypt_flavor_pack_effect = yes		# The Land of Reeds/Children of the Nile				03/??/22		
+		RICE_setup_rhodes_flavor_pack_effect = yes			# Shadow of the Colossus			03/15/22
+		RICE_setup_upper_egypt_flavor_pack_effect = yes		# Children of the Nile				03/15/22
+		RICE_setup_tarim_basin_flavor_pack_effect = yes		# Cities of the Silk Road			05/17/22
+		RICE_setup_granada_flavor_pack_effect = yes			# Memories of the Alhambra 			06/01/22
+		RICE_setup_galicia_flavor_pack_effect = yes			# The Way of Saint James 			06/30/22
+		RICE_setup_niger_delta_flavor_pack_effect = yes		# Heirs of Oduduwa		 			08/17/22		
+		RICE_setup_north_atlantic_flavor_pack_effect = yes	# From Iceland to Vinland			10/31/22
 	}
 }
 
@@ -73,6 +78,10 @@ on_game_start_after_lobby = {
 
 RICE_setup_after_game_start_on_actions = {
 	effect = {
+
+		RICE_setup_nile_flood_effect = yes	
+		RICE_setup_north_atlantic_after_game_start_effect = yes
+
 		every_player = { # Intro event
 		 	trigger_event = RICEintro.0002
 		}
@@ -83,8 +92,31 @@ RICE_setup_after_game_start_on_actions = {
 			RICE_setup_character_picker_effect = yes
 			RICE_setup_optional_flavor_events_effect = yes
 		}
+
 		# Required due to gameplay effects
 		RICE_setup_non_optional_flavor_events_effect = yes
+
+		# If needed, override other mods that also use the patented on_game_start effects method of tweaking stuff
+		if = {
+			limit = {
+				has_global_variable = CE_is_loaded
+			}
+			RICE_setup_override_CE_effect = yes
+		}
+
+		# If needed, do BAP stuff
+		if = {
+			limit = {
+				exists = faith:african_folk_islam
+				faith:african_folk_islam = {
+					has_doctrine = wap_tenet_grand_pilgrimages
+				}
+			}
+			faith:nuristani_pagan = {
+				add_doctrine = tenet_adaptive
+			}
+		}
+
 	}
 }
 

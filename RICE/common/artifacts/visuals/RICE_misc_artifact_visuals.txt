@@ -5,7 +5,62 @@ RICE_baklava = {
 }
 
 RICE_book_placeholder = {
-	icon = "artifact_VIET_book_placeholder.dds"
+	icon = "artifact_RICE_book_placeholder.dds"
 	asset = ep1_mena_book_big_01_a_entity	
+}
+
+RICE_scroll_east_asian = {
+	icon = "artifact_RICE_scroll_east_asian.dds"
+	asset = ep1_mena_book_big_01_a_entity	
+}
+
+RICE_scroll_steppe = {
+	icon = "artifact_RICE_scroll_steppe.dds"
+	asset = ep1_mena_book_big_01_a_entity	
+}
+
+RICE_scroll_middle_eastern = {
+	icon = "artifact_RICE_scroll_middle_eastern.dds"
+	asset = ep1_mena_book_big_01_a_entity	
+}
+
+RICE_scroll_himalayan = {
+	icon = "artifact_RICE_scroll_himalayan.dds"
+	asset = ep1_mena_book_big_01_a_entity	
+}
+
+RICE_scroll_indian = {
+	icon = "artifact_RICE_scroll_indian.dds"
+	asset = ep1_mena_book_big_01_a_entity	
+}
+
+RICE_music_manuscript = {
+	icon = "artifact_RICE_music_manuscript.dds"
+	asset = ep1_mediterranean_book_big_01_a_entity	
+}
+
+RICE_north_atlantic_walrus_ivory = {
+	icon = "artifact_RICE_north_atlantic_walrus_ivory.dds"
+	asset = ep1_western_box_small_basic_01_a_entity	
+}
+
+RICE_north_atlantic_polar_bear_pelt = {
+	icon = "artifact_RICE_north_atlantic_polar_bear_pelt.dds"
+	asset = ep1_western_box_small_basic_01_a_entity	
+}
+
+RICE_north_atlantic_narwhal_horn = {
+	icon = "artifact_RICE_north_atlantic_narwhal_horn.dds"
+	asset = ep1_western_box_small_basic_01_a_entity	
+}
+
+RICE_north_atlantic_inuit_artifact = {
+	icon = "artifact_RICE_north_atlantic_inuit_artifact.dds"
+	asset = ep1_western_box_small_basic_01_a_entity	
+}
+
+RICE_north_atlantic_native_american_artifact = {
+	icon = "artifact_RICE_north_atlantic_native_american_artifact.dds"
+	asset = ep1_western_box_small_basic_01_a_entity	
 }
 

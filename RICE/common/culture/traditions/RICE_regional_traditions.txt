@@ -207,18 +207,26 @@ tradition_RICE_xianbei_scions = {
 	}
 	
 	is_shown = {
-		any_parent_culture_or_above = {
-			OR = {
-				this = culture:tuyuhun
-				this = culture:qiang
+		OR = {
+			this = culture:tuyuhun
+			this = culture:qiang
+			any_parent_culture_or_above = {
+				OR = {
+					this = culture:tuyuhun
+					this = culture:qiang
+				}
 			}
 		}
 	}
 	can_pick = {
-		any_parent_culture_or_above = {
-			OR = {
-				this = culture:tuyuhun
-				this = culture:qiang
+		OR = {
+			this = culture:tuyuhun
+			this = culture:qiang
+			any_parent_culture_or_above = {
+				OR = {
+					this = culture:tuyuhun
+					this = culture:qiang
+				}
 			}
 		}
 	}
@@ -273,6 +281,7 @@ tradition_RICE_white_huns = {
 	}
 	
 	is_shown = {
+		NOT = { has_global_variable = RICE_game_started_on_TFE_start_date }
 		OR = {
 			this = culture:hephthalite
 			any_parent_culture_or_above = {
@@ -286,6 +295,7 @@ tradition_RICE_white_huns = {
 	}
 	can_pick = {
 		OR = {
+			this = culture:hephthalite
 			any_parent_culture_or_above = {
 				this = culture:hephthalite
 			}
@@ -299,7 +309,8 @@ tradition_RICE_white_huns = {
 	parameters = {
 		unlock_rice_decision_hephthalite_empire = yes
 		culture_can_raid_at_sea_even_if_feudal = yes
-		republican_vassals_pay_more = yes
+		republican_vassals_pay_more = yes		
+		unlock_RICE_pamir_tribesmen = yes
 	}
 
 	character_modifier = {
@@ -406,5 +417,217 @@ tradition_RICE_children_of_the_nile = {
 	}
 	ai_will_do = { value = 100 }
 }
+
+
+
+tradition_RICE_silk_road = {
+	category = regional
+
+	layers = {
+		0 = diplo
+		1 = mena
+		4 = RICE_silk.dds
+	}
+	
+	is_shown = {
+		any_culture_county = {
+			title_province = {
+				geographical_region = RICE_land_silk_road_region
+			}
+		}
+	}
+	can_pick = {
+		any_culture_county = {
+			count >= 4
+			title_province = {
+				geographical_region = RICE_land_silk_road_region
+			}
+		}
+	}
+	
+	parameters = {
+		city_buildings_more_powerful = yes
+		unlock_rice_silk_road_dynasty_legacy = yes
+		rice_decision_reinforce_relations_multiple = yes
+		unlock_silk_road_entertainers = yes
+		unlock_sincization = yes
+		#unlock_rice_tarim_basin_establish_translation_bureau = yes
+		#rice_decision_reinforce_relations_no_limit = yes
+	}
+
+	character_modifier = {
+		diplomatic_range_mult = 0.2
+		different_culture_opinion = 5
+		different_faith_opinion = 5
+	}	
+
+	cost = {
+		prestige = {
+			add = {
+				value = tradition_base_cost
+				desc = BASE
+				format = "BASE_VALUE_FORMAT"
+			}
+			
+			multiply = tradition_replacement_cost_if_relevant
+		}
+	}
+
+	ai_will_do = { value = 100 }
+}
+
+
+
+
+
+tradition_RICE_beyond_the_reach_of_eagles = {
+	category = regional
+
+	layers = {
+		0 = diplo
+		1 = mena
+		4 = RICE_beyond_the_reach_of_eagles.dds
+	}
+	
+	is_shown = {
+		any_culture_county = {
+			title_province = {
+				geographical_region = RICE_greater_pamir_region
+			}
+		}
+	}
+	can_pick = {
+		any_culture_county = {
+			count >= 3
+			title_province = {
+				geographical_region = RICE_greater_pamir_region
+			}
+		}
+	}
+	
+	parameters = {
+		unlimited_chinir_festival = yes
+		cheaper_pamir_watchtower_decision = yes
+		hill_farms_building_bonuses = yes
+		unlock_RICE_pamir_tribesmen = yes
+	}
+	province_modifier = {
+		mountains_supply_limit_mult = 0.25
+		desert_mountains_supply_limit_mult = 0.25
+	}
+	character_modifier = {
+		monthly_county_control_change_factor = -0.2
+		vassal_opinion = -5
+		defender_advantage = 2		
+		ai_honor = 10
+	}	
+
+	cost = {
+		prestige = {
+			add = {
+				value = tradition_base_cost
+				desc = BASE
+				format = "BASE_VALUE_FORMAT"
+			}
+			
+			multiply = tradition_replacement_cost_if_relevant
+		}
+	}
+
+	ai_will_do = { value = 25 }
+}
+
+
+
+
+
+tradition_RICE_galician_portuguese_poetry = {
+	category = regional
+
+	layers = {
+		0 = learning
+		1 = mediterranean
+		4 = RICE_cantigas.dds
+	}
+
+	is_shown = {
+		OR = {
+			has_cultural_pillar = heritage_iberian
+			has_cultural_pillar = language_iberian
+			scope:character = {
+				AND = {
+					religion = religion:christianity_religion
+					capital_province = {
+						geographical_region = world_europe_west_iberia
+					}
+				}
+			}
+		}
+	}
+
+	can_pick = {
+		OR = {
+			has_cultural_pillar = heritage_iberian
+			has_cultural_pillar = language_iberian
+			scope:character = {
+				AND = {
+					religion = religion:christianity_religion
+					capital_province = {
+						geographical_region = world_europe_west_iberia
+					}
+				}
+			}
+		}
+	}
+	
+	parameters = {
+		characters_are_better_court_poets = yes
+		unlock_cantiga_decisions = yes
+		better_cantiga_results = yes
+		promote_cantiga_bonuses = yes
+	}
+
+	character_modifier = {
+		diplomacy_per_piety_level = 1
+		monthly_learning_lifestyle_xp_gain_mult = 0.1
+	}	
+	
+	cost = {
+		prestige = {
+			add = {
+				value = tradition_base_cost
+				desc = BASE
+				format = "BASE_VALUE_FORMAT"
+			}
+			if = {
+				limit = {
+					NOR = {
+						any_in_list = { list = traits this = flag:ethos_courtly }
+						any_in_list = { list = traits this = flag:ethos_spiritual }
+					}
+				}
+				add = {
+					value = tradition_incompatible_ethos_penalty
+					desc = not_spiritual_or_courtly_desc
+				}
+			}
+			
+			multiply = tradition_replacement_cost_if_relevant
+		}
+	}
+	
+	ai_will_do = {
+		value = 100
+		if = {
+			limit = { # AI should avoid stacking traditions for courtly court positions
+				any_in_list = { list = traits this = flag:tradition_music_theory }
+			}
+			multiply = 0.75
+		}
+	}
+}
+
+
+
 
 

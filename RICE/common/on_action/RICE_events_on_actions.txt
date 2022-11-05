@@ -1,30 +1,229 @@
-﻿
+﻿yearly_global_pulse = {
+	on_actions = { RICE_yearly_global_pulse }
+}
+
+RICE_yearly_global_pulse = {
+	effect = {
+		# Zhang Yichao dies
+		if = {
+			limit = {
+				game_start_date = 867.1.1 # Makes no sense if Zhang Yichao isn't around
+				exists = title:k_guiyi.holder
+				is_target_in_global_variable_list = {
+					name = RICE_dunhuang_tang_hostage
+					target = flag:yeeted_yichao
+				}
+				NOT = { has_global_variable = RICE_zhang_yichao_passed_away }
+				current_date >= 871.1.1 # Don't have it happen right away
+			}
+			random = {
+				chance = 30
+				modifier = {
+					add = 10
+					current_date >= 874.1.1
+				}
+				modifier = {
+					add = 10
+					current_date >= 876.1.1
+				}
+				modifier = {
+					add = 20
+					current_date >= 878.1.1
+				}
+				modifier = {
+					add = 20
+					current_date >= 880.1.1
+				}
+				set_global_variable = {
+					name = RICE_zhang_yichao_passed_away
+					value = yes
+				}
+				RICE_tarim_basin_dunhuang_zhang_yichao_death_effect = yes
+				every_player = {
+					limit = {
+						is_ai = no
+						OR = {
+							any_held_title = {
+								tier = tier_county
+								any_county_province = {
+									geographical_region = RICE_dunhuang_region
+								}
+							}
+							any_liege_or_above = {
+								has_title = title:k_guiyi
+							}
+						}	
+					}
+					trigger_event = tarim_basin.0054
+				}
+			}
+		}
+
+
+		# Eight Protectors Abandoned
+		if = {
+			limit = {
+				has_global_variable = RICE_tarim_basin_khotan_eight_protectors_abandoned_timer
+				has_global_variable = RICE_tarim_basin_khotan_eight_protectors_abandoned
+			}
+			random = {
+				chance = 15
+				random_ruler = {
+					limit = {
+						religion = religion:buddhism_religion
+						any_held_title = {
+							tier = tier_county
+							any_county_province = {
+								geographical_region = RICE_land_silk_road_region
+							}
+						}
+					}
+					trigger_event = {
+						id = tarim_basin.0173
+						days = { 30 350 }
+					}
+				}
+			}
+		}	
+
+		# Granada becomes Jewish majority or ruled by a Jew while there are still tensions
+		if = {
+			limit = {
+				NOT = { has_global_variable = RICE_granada_tensions_resolved }
+				OR = {
+					title:c_granada.holder = {
+						religion = religion:judaism_religion
+					}
+					title:c_granada = {
+						faith.religion = religion:judaism_religion
+					}
+				}
+				title:c_granada = {
+					has_county_modifier = RICE_granada_garnata_al_yahud_tensions
+				}
+			}
+			title:c_granada.holder = {
+				trigger_event = granada.0012
+			}
+		}
+
+		# 1066 Jewish pogrom
+		# Should be triggered quickly after the global variable RICE_granada_tensions_rising is active
+		if = {
+			limit = {
+				has_global_variable = RICE_granada_tensions_rising
+				NOT = { has_global_variable = RICE_granada_tensions_resolved }
+				# If Granada is Jewish or owned by a Jew, the event about Granada turning majority Jewish takes precedence
+				NOR = {
+					title:c_granada.holder = {
+						religion = religion:judaism_religion
+					}
+					title:c_granada = {
+						faith.religion = religion:judaism_religion
+					}
+				}
+				title:c_granada = {
+					has_county_modifier = RICE_granada_garnata_al_yahud_tensions
+				}
+			}
+			title:c_granada.holder = {
+				trigger_event = {
+					id = granada.0014
+					days = { 0 365 }
+				}
+			}
+		}
+
+		# Alhambra structure is finished building
+		if = {
+			limit = {
+				OR = {
+					has_global_variable = RICE_granada_alhambra_building_generalife
+					has_global_variable = RICE_granada_alhambra_building_house_of_worship
+					has_global_variable = RICE_granada_alhambra_building_rawda
+					has_global_variable = RICE_granada_alhambra_building_comares_palace
+					has_global_variable = RICE_granada_alhambra_building_court_of_the_lions
+					has_global_variable = RICE_granada_alhambra_building_generic_palatial
+					has_global_variable = RICE_granada_alhambra_building_generic_recreational
+					has_global_variable = RICE_granada_alhambra_building_generic_military
+				}
+				NOT = { has_global_variable = RICE_granada_alhambra_construction_timer }
+			}
+			title:c_granada.holder = {
+				trigger_event = {
+					id = granada.0021
+					days = { 0 365 }
+				}
+			}
+		}
+
+		# 1117 rebellion in Santiago
+		# Should be triggered quickly after the global variable RICE_galicia_santiago_tensions_rising is active
+		if = {
+			limit = {
+				has_global_variable = RICE_galicia_santiago_tensions_rising
+				NOT = { has_global_variable = RICE_galicia_1117_rebellion_happened }
+				title:c_santiago.holder = {
+					religion = religion:christianity_religion
+				}				
+				title:c_santiago.holder.cp:councillor_court_chaplain = {
+					exists = yes
+					is_available_adult = yes
+				}
+				title:c_santiago = {
+					faith.religion = religion:christianity_religion
+				}
+			}
+			title:c_santiago.holder = {
+				trigger_event = {
+					id = galicia.0023
+					days = { 0 365 }
+				}
+			}
+		}
+
+		# Cantiga de Santa Maria is finished composing
+		# if = {
+		# 	limit = {
+		# 		NOT = { has_global_variable = RICE_CSM_compilation_timer }
+		# 	}
+		# 	ordered_in_global_list = {
+		# 		variable = RICE_galicia_alfonso_x_equivalent
+		# 		save_scope_as = alfonso_x
+		# 	}			
+		# }
+
+	}
+}
 
 yearly_playable_pulse = {
 	on_actions = {
-		delay = { days = 80 }
+		delay = { days = { 8 288 } }
 		RICE_events_yearly_pulse
-		delay = { days = 50 }
+		delay = { days = { 8 288 } }
 		RICE_events_historical_pulse
+		delay = { days = { 8 288 } }
+		RICE_tarim_basin_silk_road_communities_events_pulse
 	}
 }
 
 
 three_year_playable_pulse = {
 	on_actions = {
-		delay = { days = 39 }
+		delay = { days = { 8 288 } }
 		RICE_events_tri_yearly_pulse
 	}
 }
 
 five_year_playable_pulse = {
 	on_actions = {
-		delay = { days = 44 }
+		delay = { days = { 8 288 } }
 		RICE_events_five_yearly_pulse
-		delay = { days = 99 }
-		RICE_events_unique_yearly_pulse
+		delay = { days = { 8 288 } }
+		RICE_events_courtier_yearly_pulse
 	}
 }
+
 
 # Common events - covers normal events
 RICE_events_yearly_pulse = {
@@ -104,6 +303,9 @@ RICE_events_yearly_pulse = {
 		100 = breton.0063	# Lots of Salted Butter
 		100 = breton.0064	# Drinking Chouchen
 		100 = breton.0065	# Salted Butter gift
+		100 = bao.0002		# The Saintly Well
+		100 = bao.0051		# Korrigans witch circle!
+		100 = bao.0052		# What to do when you meet a korrigan ?
 				
 		# SOCOTRA
 		100 = socotra.0051	# Visit a pool in Socotra
@@ -183,6 +385,37 @@ RICE_events_yearly_pulse = {
 		100 = upper_egypt.0063	# Priest giving a sermon on the Nile flood
 		100 = upper_egypt.0064	# Come across priests praying to the Nile
 		100 = upper_egypt.0067	# Eating Ful Medames
+
+		# TARIM BASIN
+		100 = tarim_basin.0250	# Visiting Mogao Caves with noble family depicted
+		100 = tarim_basin.0258	# Gift of juicy Dunhuang melons
+		100 = tarim_basin.0262	# Taking Rhubarb for health reasons
+		100 = tarim_basin.0264	# Come across a big reclining Buddha in a Mogao cave
+		100 = tarim_basin.0265	# Family pays fine in silk
+		100 = tarim_basin.0266	# Famous trinket merchant passes through the Silk Road
+		100 = tarim_basin.0268	# Encounter a caravan of pilgrims praying on their way to Mogao
+		100 = tarim_basin.0270	# Performers from Tarim Basin performing in the street at night
+
+		# GRANADA
+		100 = granada.0082		# Traveler praises Granada landscape
+		100 = granada.0083		# Eating Berenjenas con Miel
+		100 = granada.0084		# Eating Remojon Granadino
+		100 = granada.0088		# Granada ruler feels proud of ruling part of Granada
+		100 = granada.0089		# Granada ruler gets a little gold from the Darro river
+
+		# GALICIA
+		100 = galicia.0053		# Hórreo granaries
+		100 = galicia.0056		# Villagers make offerings of hens to the moura of a cave for good luck
+		100 = galicia.0057		# Hearing the story of Saint James and Queen Lupa
+		100 = galicia.0061		# See some pilgrims with scallop shells
+		100 = galicia.0062		# Pilgrims are settling down in your territories
+
+		# NORTH ATLANTIC
+		100 = north_atlantic.0200		# Eating great auks
+		100 = north_atlantic.0204		# Hearing tales about Gaelic monks in the northern isles
+		100 = north_atlantic.0205		# Seeing a geyser in Iceland
+		100 = north_atlantic.0206		# Get some Iceland Moss or not?
+		100 = north_atlantic.0207		# Puffin meat
 		
 	}
 }
@@ -265,6 +498,7 @@ RICE_events_tri_yearly_pulse = {
 		100 = breton.0053	# Herbal concoction from the eagle fern
 		100 = breton.0054	# Herbal concoction from the golden grass
 		100 = breton.0061	# Bard tells of the Bugul Noz, the Night Shephard
+		100 = bao.0050		# Korriganed steal gold coins
 		
 		# SOCOTRA
 		100 = socotra.0052	# Visit Diksam Plateau to learn about Dragon's Blood
@@ -350,6 +584,34 @@ RICE_events_tri_yearly_pulse = {
 		# UPPER EGYPT
 		100 = upper_egypt.0060	# Major hippo attack along the Nile
 		100 = upper_egypt.0065	# You become interested in studying nilometer records
+
+		# DUNHUANG
+		100 = tarim_basin.0251	# Visiting Mogao Caves - see attractive person
+		100 = tarim_basin.0252	# Pass by a section of the Great Wall
+		100 = tarim_basin.0254	# Foreign artists give presents
+		100 = tarim_basin.0259	# Ancient hidden, sealed Mogao cave discovered
+		100 = tarim_basin.0260	# Important delegation/envoys pass through on the way to China
+		100 = tarim_basin.0261	# Dispute between Khotanese monk and Sogdian merchant
+		100 = tarim_basin.0263	# Inspecting a new Mogao cave made by community effort
+
+		# GRANADA
+		100 = granada.0080		# Granada silk industry doing well
+		100 = granada.0081		# Granada silk industry not doing well
+		100 = granada.0085		# A new canal can be built in Granada
+		100 = granada.0090		# Granada ruler inspects the canals of Granada
+
+		# GALICIA
+		100 = galicia.0051		# Pedras de Abalar, the rocking stones of Galicia
+		100 = galicia.0052		# Tales of the ancient Briton inhabitants of Galicia
+		100 = galicia.0054		# Acquire some Galician horses or not?
+		100 = galicia.0058		# Bandits caught extorting money from pilgrims along the Way of Saint James
+		100 = galicia.0059		# Criminals going on pilgrimage along the Way of Saint James
+		100 = galicia.0060		# Invite a foreign pilgrim to stay in your court?
+
+		# NORTH ATLANTIC
+		100 = north_atlantic.0201		# Horse fighting in Iceland - two courtiers fight fight fight
+		100 = north_atlantic.0202		# Broches in Scotland
+		100 = north_atlantic.0203		# Bullroarer in Scotland
 		
 	}
 }
@@ -418,6 +680,7 @@ RICE_events_five_yearly_pulse = {
 		100 = breton.0055	# Lost thanks to the Grass of Oblivion
 		100 = breton.0057	# Meet a mysterious old man at night (Ankou)
 		100 = breton.0062	# A shipwrecked sailor claims to have seen the city of Ys
+		100 = bao.0001		# The Sonerien Du
 				
 		# SOCOTRA
 		100 = socotra.0050	# Overgrazing on Socotra
@@ -478,13 +741,32 @@ RICE_events_five_yearly_pulse = {
 		# UPPER EGYPT
 		100 = upper_egypt.0062	# Pastoralists moving into "khirs" along the Nile
 		100 = upper_egypt.0066	# Transform an ancient Egyptian temple into a little town?
+
+		# DUNHUANG
+		100 = tarim_basin.0253	# Irrigation/canal experts arrive from China
+		100 = tarim_basin.0255	# Buddhist nun acquaintance passes away and leaves you some stuff in her will but her family disputes this
+		100 = tarim_basin.0256	# Elderly monk passes away and relatives fight over inheritance
+		100 = tarim_basin.0257	# Fake monks and nuns
+		100 = tarim_basin.0267	# Visiting White Horse Pagoda
+		100 = tarim_basin.0269	# Acrobats from China arrive to entertain your court
+
+		# GRANADA
+		100 = granada.0086		# A Granadan canal is in need of urgent repairs
+		100 = granada.0087		# Inspecting Granada's industrial sector
+
+		# GALICIA
+		100 = galicia.0050		# Learning about Barallete, a special language of the knife-makers
+		100 = galicia.0055		# A nobleman supposedly dies after encountering Mouros (based on a legend involving a 15th/16th century Spanish nobleman)
+
+		# NORTH ATLANTIC
+		100 = north_atlantic.0208		# Courtier keeps serving people dairy, thus being an inhospitable host (at least according to medieval Icelandic norms), and they only serve you skyr, Icelandic yogurt (which is tasty IRL btw)
 		
 	}
 }
 
 
-# RICE Unique events
-RICE_events_unique_yearly_pulse = {
+# RICE Courtier spawn events
+RICE_events_courtier_yearly_pulse = {
 	trigger = {
 		RICE_basic_is_available_adult_trigger = yes
 	}
@@ -524,6 +806,15 @@ RICE_events_unique_yearly_pulse = {
 		50 = sus.0031		# Trans-Saharan West Africa Merchant offers services
 		50 = sus.0032		# Trans-Saharan Berber Merchant offers services
 		50 = sus.0033		# Trans-Saharan Jewish Merchant offers services
+
+		# GRANADA
+		150 = granada.0019	# Granadan Jew arrives in your court
+
+		# NORTH ATLANTIC
+		150 = north_atlantic.0090	# European/Gaelic servant/slave is noticed for abilities
+		150 = north_atlantic.0091	# Courtier marries or takes as a concubine a European/Gaelic servant/slave
+		50 = north_atlantic.0092	# Captured Native American arrives with crew
+		50 = north_atlantic.0093	# Native American travels to your court
 		
 	}
 }
@@ -531,6 +822,14 @@ RICE_events_unique_yearly_pulse = {
 
 # RICE historical events
 RICE_events_historical_pulse = {
+
+	events = {
+		tarim_basin.0056		# Tang Dynasty "gifts" for the Guiyi Circuit
+		tarim_basin.0242		# Lose fake China status
+		galicia.0041			# Finish compiling the Cantigas de Santa Maria
+		galicia.0046			# Finished expanding the Cantigas de Santa Maria
+	}
+
 	random_events = {
 		chance_of_no_event = {
 			value = 20
@@ -555,6 +854,55 @@ RICE_events_historical_pulse = {
 		# YORKSHIRE
 		50 = yorkshire.0050		# Stamford Bull Run happens
 		200 = yorkshire.0090	# Charter fairs get updated once all four decisions are taken
+
+		# TARIM BASIN
+		200 = tarim_basin.0016	# Lop Nur lake level changes (for earlier TFE start dates)
+
+		# GRANADA
+		200 = granada.0013		# Trouble starts to brew as there are signs of Anti-Semitic discontent among the non-Jewish population
+
+		# GALICIA
+		200 = galicia.0022		# Signs that Santiago is about to rebel against the Christian authorities
+		
+	}
+}
+
+
+# Silk Road community gifts
+RICE_tarim_basin_silk_road_communities_events_pulse = {
+	trigger = {
+		RICE_basic_is_available_adult_trigger = yes
+		RICE_tarim_basin_has_silk_road_contacts_trigger = yes
+	}
+	random_events = {
+		chance_of_no_event = {
+			value = 50
+			if = {
+				limit = {
+					exists = dynasty
+					dynasty = {
+						has_dynasty_perk = RICE_tarim_basin_silk_road_legacy_5
+					}
+				}
+				subtract = 20
+			}
+		}
+
+		300 = 0
+
+		10 = tarim_basin.0021  # Gift of gold from locals
+		10 = tarim_basin.0022  # Gift of promising business deals
+		10 = tarim_basin.0023  # Gift of a great feast
+		10 = tarim_basin.0024  # Gift of renown
+		10 = tarim_basin.0025  # Gift of religious artifacts aka piety
+		10 = tarim_basin.0026  # Gift of a book artifact
+		10 = tarim_basin.0027  # Gift of soldiers
+		10 = tarim_basin.0028  # Gift of intel
+		10 = tarim_basin.0029  # Gift of a courtier
+		10 = tarim_basin.0030  # Gift of Herbs and Medicines
+		10 = tarim_basin.0031  # Gift of infrastructure
+		10 = tarim_basin.0032  # Gift of bodyguards
+		10 = tarim_basin.0033  # Gift of Ideas
 		
 	}
 }

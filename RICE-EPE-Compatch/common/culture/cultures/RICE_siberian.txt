@@ -8,7 +8,7 @@ evenk = { # Covers several Tungustic groups, including the Evenks proper, Even, 
 	language = language_tungusic
 	martial_custom = martial_custom_male_only
 	traditions = {
-		tradition_RICE_siberian_survivalists
+		#tradition_RICE_siberian_survivalists
 		tradition_pastoralists
 		tradition_sacred_hunts
 	}
@@ -21,21 +21,37 @@ evenk = { # Covers several Tungustic groups, including the Evenks proper, Even, 
 	unit_gfx = { northern_unit_gfx }
 	
 	ethnicities = {
-		10 = asian_mongol_1
-		10 = asian_mongol_2
-		10 = asian_mongol_3
-		10 = asian_mongol_4
-		10 = asian_mongol_5
-		10 = asian_mongol_6
-		10 = asian_mongol_7
-		10 = asian_mongol_8
-		10 = asian_mongol_9
-		10 = asian_mongol_10
-		10 = asian_mongol_11
-		10 = asian_mongol_12
-		10 = asian_mongol_13
-		10 = asian_mongol_14
-		10 = asian_mongol_15
+		5 = asian_mongol_1
+		5 = asian_mongol_2
+		5 = asian_mongol_3
+		5 = asian_mongol_4
+		5 = asian_mongol_5
+		5 = asian_mongol_6
+		5 = asian_mongol_7
+		5 = asian_mongol_8
+		5 = asian_mongol_9
+		5 = asian_mongol_10
+		5 = asian_mongol_11
+		5 = asian_mongol_12
+		5 = asian_mongol_13
+		5 = asian_mongol_14
+		5 = asian_mongol_15
+		5 = asian_mongol_16
+		5 = asian_mongol_17
+		5 = asian_mongol_18
+		5 = asian_mongol_19
+		5 = asian_mongol_20
+		5 = asian_mongol_21
+		5 = asian_mongol_22
+		5 = asian_mongol_23
+		5 = asian_mongol_24
+		5 = asian_mongol_25
+		5 = asian_mongol_26
+		5 = asian_mongol_27
+		5 = asian_mongol_28
+		5 = asian_mongol_29
+		5 = asian_mongol_30
+		5 = asian_mongol_31
 		40 = european_circumpolar_dark_1
 		40 = european_circumpolar_dark_2
 		20 = european_circumpolar_brown_1
@@ -52,7 +68,7 @@ nivkh = { # Historically spread further west into Manchuria
 	language = language_nivkh
 	martial_custom = martial_custom_male_only
 	traditions = {
-		tradition_RICE_siberian_survivalists
+		#tradition_RICE_siberian_survivalists
 		tradition_welcoming
 	}
 	
@@ -64,21 +80,37 @@ nivkh = { # Historically spread further west into Manchuria
 	unit_gfx = { northern_unit_gfx }
 	
 	ethnicities = {
-		10 = asian_mongol_1
-		10 = asian_mongol_2
-		10 = asian_mongol_3
-		10 = asian_mongol_4
-		10 = asian_mongol_5
-		10 = asian_mongol_6
-		10 = asian_mongol_7
-		10 = asian_mongol_8
-		10 = asian_mongol_9
-		10 = asian_mongol_10
-		10 = asian_mongol_11
-		10 = asian_mongol_12
-		10 = asian_mongol_13
-		10 = asian_mongol_14
-		10 = asian_mongol_15
+		5 = asian_mongol_1
+		5 = asian_mongol_2
+		5 = asian_mongol_3
+		5 = asian_mongol_4
+		5 = asian_mongol_5
+		5 = asian_mongol_6
+		5 = asian_mongol_7
+		5 = asian_mongol_8
+		5 = asian_mongol_9
+		5 = asian_mongol_10
+		5 = asian_mongol_11
+		5 = asian_mongol_12
+		5 = asian_mongol_13
+		5 = asian_mongol_14
+		5 = asian_mongol_15
+		5 = asian_mongol_16
+		5 = asian_mongol_17
+		5 = asian_mongol_18
+		5 = asian_mongol_19
+		5 = asian_mongol_20
+		5 = asian_mongol_21
+		5 = asian_mongol_22
+		5 = asian_mongol_23
+		5 = asian_mongol_24
+		5 = asian_mongol_25
+		5 = asian_mongol_26
+		5 = asian_mongol_27
+		5 = asian_mongol_28
+		5 = asian_mongol_29
+		5 = asian_mongol_30
+		5 = asian_mongol_31
 		40 = european_circumpolar_dark_1
 		40 = european_circumpolar_dark_2
 		20 = european_circumpolar_brown_1
@@ -95,7 +127,7 @@ yakut = { # Northernmost Turkic peoples - originally from Lake Baikal area, migr
 	language = language_turkic
 	martial_custom = martial_custom_male_only
 	traditions = {
-		tradition_RICE_siberian_survivalists
+		#tradition_RICE_siberian_survivalists
 		tradition_pastoralists
 		tradition_horse_breeder
 	}
@@ -108,25 +140,42 @@ yakut = { # Northernmost Turkic peoples - originally from Lake Baikal area, migr
 	unit_gfx = { mongol_unit_gfx }
 	
 	ethnicities = {
-		10 = asian_mongol_1
-		10 = asian_mongol_2
-		10 = asian_mongol_3
-		10 = asian_mongol_4
-		10 = asian_mongol_5
-		10 = asian_mongol_6
-		10 = asian_mongol_7
-		10 = asian_mongol_8
-		10 = asian_mongol_9
-		10 = asian_mongol_10
-		10 = asian_mongol_11
-		10 = asian_mongol_12
-		10 = asian_mongol_13
-		10 = asian_mongol_14
-		10 = asian_mongol_15
-		40 = european_circumpolar_dark_1
-		40 = european_circumpolar_dark_2
-		20 = european_circumpolar_brown_1
-		20 = european_circumpolar_brown_2
+		4 = asian_turkic_1
+		4 = asian_turkic_2
+		4 = asian_turkic_3
+		4 = asian_turkic_4
+		4 = asian_turkic_5
+		4 = asian_turkic_6
+		4 = asian_turkic_7
+		4 = asian_turkic_8 
+		4 = asian_turkic_9
+		4 = asian_turkic_10
+		4 = asian_turkic_11
+		4 = asian_turkic_12
+		4 = asian_turkic_13
+		4 = asian_turkic_14
+		4 = asian_turkic_15 
+		4 = asian_turkic_16_eastern
+		4 = asian_turkic_17_eastern
+		4 = asian_turkic_18
+		4 = asian_turkic_19
+		4 = asian_turkic_20
+		4 = asian_turkic_21
+		4 = asian_turkic_22
+		4 = asian_turkic_22
+		4 = asian_turkic_23
+		4 = asian_turkic_24
+		4 = asian_turkic_25
+		4 = asian_turkic_36
+		4 = asian_turkic_37
+		4 = asian_turkic_38
+		4 = asian_turkic_39
+		4 = asian_turkic_40
+		3 = asian_turkic_46
+		3 = asian_turkic_47
+		3 = asian_turkic_48
+		3 = asian_turkic_49
+		3 = asian_turkic_50
 	}
 }
 
@@ -139,7 +188,7 @@ yeniseian = { # Collective name for several different groups such as the Ket and
 	language = language_yeniseian
 	martial_custom = martial_custom_male_only
 	traditions = {
-		tradition_RICE_siberian_survivalists
+		#tradition_RICE_siberian_survivalists
 		tradition_storytellers
 		tradition_forest_folk
 	}
@@ -152,21 +201,37 @@ yeniseian = { # Collective name for several different groups such as the Ket and
 	unit_gfx = { northern_unit_gfx }
 	
 	ethnicities = {
-		10 = asian_mongol_1
-		10 = asian_mongol_2
-		10 = asian_mongol_3
-		10 = asian_mongol_4
-		10 = asian_mongol_5
-		10 = asian_mongol_6
-		10 = asian_mongol_7
-		10 = asian_mongol_8
-		10 = asian_mongol_9
-		10 = asian_mongol_10
-		10 = asian_mongol_11
-		10 = asian_mongol_12
-		10 = asian_mongol_13
-		10 = asian_mongol_14
-		10 = asian_mongol_15
+		5 = asian_mongol_1
+		5 = asian_mongol_2
+		5 = asian_mongol_3
+		5 = asian_mongol_4
+		5 = asian_mongol_5
+		5 = asian_mongol_6
+		5 = asian_mongol_7
+		5 = asian_mongol_8
+		5 = asian_mongol_9
+		5 = asian_mongol_10
+		5 = asian_mongol_11
+		5 = asian_mongol_12
+		5 = asian_mongol_13
+		5 = asian_mongol_14
+		5 = asian_mongol_15
+		5 = asian_mongol_16
+		5 = asian_mongol_17
+		5 = asian_mongol_18
+		5 = asian_mongol_19
+		5 = asian_mongol_20
+		5 = asian_mongol_21
+		5 = asian_mongol_22
+		5 = asian_mongol_23
+		5 = asian_mongol_24
+		5 = asian_mongol_25
+		5 = asian_mongol_26
+		5 = asian_mongol_27
+		5 = asian_mongol_28
+		5 = asian_mongol_29
+		5 = asian_mongol_30
+		5 = asian_mongol_31
 		40 = european_circumpolar_dark_1
 		40 = european_circumpolar_dark_2
 		20 = european_circumpolar_brown_1
@@ -183,7 +248,7 @@ yukaghir = { # Paleo-Siberian peoples limited to eastern Siberia now, but once s
 	language = language_yukaghir
 	martial_custom = martial_custom_male_only
 	traditions = {
-		tradition_RICE_siberian_survivalists
+		#tradition_RICE_siberian_survivalists
 		tradition_hunters
 		tradition_tribe_unity
 	}
@@ -196,21 +261,37 @@ yukaghir = { # Paleo-Siberian peoples limited to eastern Siberia now, but once s
 	unit_gfx = { northern_unit_gfx }
 	
 	ethnicities = {
-		10 = asian_mongol_1
-		10 = asian_mongol_2
-		10 = asian_mongol_3
-		10 = asian_mongol_4
-		10 = asian_mongol_5
-		10 = asian_mongol_6
-		10 = asian_mongol_7
-		10 = asian_mongol_8
-		10 = asian_mongol_9
-		10 = asian_mongol_10
-		10 = asian_mongol_11
-		10 = asian_mongol_12
-		10 = asian_mongol_13
-		10 = asian_mongol_14
-		10 = asian_mongol_15
+		5 = asian_mongol_1
+		5 = asian_mongol_2
+		5 = asian_mongol_3
+		5 = asian_mongol_4
+		5 = asian_mongol_5
+		5 = asian_mongol_6
+		5 = asian_mongol_7
+		5 = asian_mongol_8
+		5 = asian_mongol_9
+		5 = asian_mongol_10
+		5 = asian_mongol_11
+		5 = asian_mongol_12
+		5 = asian_mongol_13
+		5 = asian_mongol_14
+		5 = asian_mongol_15
+		5 = asian_mongol_16
+		5 = asian_mongol_17
+		5 = asian_mongol_18
+		5 = asian_mongol_19
+		5 = asian_mongol_20
+		5 = asian_mongol_21
+		5 = asian_mongol_22
+		5 = asian_mongol_23
+		5 = asian_mongol_24
+		5 = asian_mongol_25
+		5 = asian_mongol_26
+		5 = asian_mongol_27
+		5 = asian_mongol_28
+		5 = asian_mongol_29
+		5 = asian_mongol_30
+		5 = asian_mongol_31
 		40 = european_circumpolar_dark_1
 		40 = european_circumpolar_dark_2
 		20 = european_circumpolar_brown_1

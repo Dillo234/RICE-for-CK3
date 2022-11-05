@@ -176,7 +176,7 @@ RICE_theme_socotra_beach = {
 		reference = "gfx/interface/icons/event_types/type_love.dds"
 	}
 	sound = {
-		reference = @generic_event_theme_sound
+		reference = "event:/SFX/Events/Themes/sfx_event_theme_type_activity"
 	}
 	background = {
 		event_background = RICE_background_socotra_beach
@@ -308,7 +308,7 @@ RICE_theme_red_sea_beach = {
 		reference = "gfx/interface/icons/event_types/type_domain.dds"
 	}
 	sound = {
-		reference = @generic_event_theme_sound
+		reference = "event:/SFX/Events/Themes/sfx_event_theme_type_activity"
 	}
 	background = {
 		event_background = RICE_background_red_sea_beach
@@ -368,7 +368,7 @@ RICE_theme_greek_beach = {
 		reference = "gfx/interface/icons/event_types/type_love.dds"
 	}
 	sound = {
-		reference = @generic_event_theme_sound
+		reference = "event:/SFX/Events/Themes/sfx_event_theme_type_activity"
 	}
 	background = {
 		event_background = RICE_background_greek_beach
@@ -605,5 +605,301 @@ RICE_theme_egypt_temple_exterior = {
 		event_background = RICE_background_egypt_temple_exterior
 	}
 }
+
+RICE_theme_dunhuang_mogao_caves = {
+	icon = {
+		reference = "gfx/interface/icons/event_types/type_faith.dds"
+	}
+	sound = {
+		reference = "event:/SFX/Events/Themes/sfx_event_theme_type_faith"
+	}
+	background = {
+		event_background = RICE_background_dunhuang_mogao_caves
+	}
+}
+
+RICE_theme_dunhuang_villa = {
+	icon = {
+		reference = "gfx/interface/icons/event_types/type_domain.dds"
+	}
+	sound = {
+		reference = @generic_event_theme_sound
+	}
+	background = {
+		event_background = RICE_background_dunhuang_villa
+	}
+}
+
+RICE_theme_tarim_basin_landscape = {
+	icon = {
+		reference = "gfx/interface/icons/event_types/type_domain.dds"
+	}
+	sound = {
+		reference = @generic_event_theme_sound
+	}
+	background = {
+		event_background = RICE_background_tarim_basin_landscape
+	}
+}
+
+RICE_theme_tarim_basin_town = {
+	icon = {
+		reference = "gfx/interface/icons/event_types/type_domain.dds"
+	}
+	sound = {
+		reference = @generic_event_theme_sound
+	}
+	background = {
+		event_background = RICE_background_tarim_basin_town
+	}
+}
+
+
+RICE_theme_granada_alhambra_exterior = {
+	icon = {
+		reference = "gfx/interface/icons/event_types/type_love.dds"
+	}
+	sound = {
+		reference = "event:/SFX/Events/Themes/sfx_event_theme_type_activity"
+	}
+	background = {
+		event_background = RICE_background_granada_alhambra_exterior
+	}
+}
+
+RICE_theme_granada_alhambra_interior = {
+	icon = {
+		reference = "gfx/interface/icons/event_types/type_love.dds"
+	}
+	sound = {
+		reference = @generic_event_theme_sound
+	}
+	background = {
+		event_background = RICE_background_granada_alhambra_interior
+	}
+}
+
+RICE_theme_granada_alhambra_courtyard = {
+	icon = {
+		reference = "gfx/interface/icons/event_types/type_love.dds"
+	}
+	sound = {
+		reference = "event:/SFX/Events/Themes/sfx_event_theme_type_activity"
+	}
+	background = {
+		event_background = RICE_background_granada_alhambra_courtyard
+	}
+}
+
+RICE_theme_andalusian_countryside = {
+	icon = {
+		reference = "gfx/interface/icons/event_types/type_domain.dds"
+	}
+	sound = {
+		reference = "event:/SFX/Events/Themes/sfx_event_theme_type_activity"
+	}
+	background = {
+		event_background = RICE_background_andalusian_countryside
+	}
+}
+
+RICE_theme_iberian_beach = {
+	icon = {
+		reference = "gfx/interface/icons/event_types/type_domain.dds"
+	}
+	sound = {
+		reference = "event:/SFX/Events/Themes/sfx_event_theme_type_activity"
+	}
+	background = {
+		event_background = RICE_background_iberian_beach
+	}
+}
+
+RICE_theme_camino_de_santiago_church = {
+	icon = {
+		reference = "gfx/interface/icons/event_types/type_faith.dds"
+	}
+	sound = {
+		reference = "event:/SFX/Events/Themes/sfx_event_theme_type_activity"
+	}
+	background = {
+		event_background = RICE_background_camino_de_santiago_church
+	}
+}
+
+
+RICE_theme_camino_de_santiago_road = {
+	icon = {
+		reference = "gfx/interface/icons/event_types/type_domain.dds"
+	}
+	sound = {
+		reference = "event:/SFX/Events/Themes/sfx_event_theme_type_activity"
+	}
+	background = {
+		event_background = RICE_background_camino_de_santiago_road
+	}
+}
+
+RICE_theme_galicia_woods = {
+	icon = {
+		reference = "gfx/interface/icons/event_types/type_domain.dds"
+	}
+	sound = {
+		reference = "event:/SFX/Events/Themes/sfx_event_theme_type_activity"
+	}
+	background = {
+		event_background = RICE_background_galicia_woods
+	}
+}
+
+
+RICE_theme_north_atlantic_port = {
+	icon = {
+		reference = "gfx/interface/icons/event_types/type_stewardship.dds"
+	}
+	sound = {
+		reference = @generic_event_theme_sound
+	}
+	background = {
+		event_background = RICE_background_north_atlantic_port
+	}
+}
+
+RICE_theme_north_atlantic_greenland_farm = {
+	icon = {
+		reference = "gfx/interface/icons/event_types/type_domain.dds"
+	}
+	sound = {
+		reference = @generic_event_theme_sound
+	}
+	background = {
+		event_background = RICE_background_north_atlantic_greenland_farm
+	}
+}
+
+RICE_theme_north_atlantic_greenland = {
+	icon = {
+		reference = "gfx/interface/icons/event_types/type_domain.dds"
+	}
+	sound = {
+		reference = @generic_event_theme_sound
+	}
+	background = {
+		event_background = RICE_background_north_atlantic_greenland
+	}
+}
+
+RICE_theme_north_atlantic_disko_bay = {
+	icon = {
+		reference = "gfx/interface/icons/event_types/type_hunt.dds"
+	}
+	sound = {
+		reference = @generic_event_theme_sound
+	}
+	background = {
+		event_background = RICE_background_north_atlantic_disko_bay
+	}
+}
+
+RICE_theme_north_atlantic_baffin_island = {
+	icon = {
+		reference = "gfx/interface/icons/event_types/type_hunt.dds"
+	}
+	sound = {
+		reference = @generic_event_theme_sound
+	}
+	background = {
+		event_background = RICE_background_north_atlantic_baffin_island
+	}
+}
+
+RICE_theme_north_atlantic_markland = {
+	icon = {
+		reference = "gfx/interface/icons/event_types/type_hunt.dds"
+	}
+	sound = {
+		reference = @generic_event_theme_sound
+	}
+	background = {
+		event_background = RICE_background_north_atlantic_markland
+	}
+}
+
+RICE_theme_north_atlantic_markland_village = {
+	icon = {
+		reference = "gfx/interface/icons/event_types/type_hunt.dds"
+	}
+	sound = {
+		reference = @generic_event_theme_sound
+	}
+	background = {
+		event_background = RICE_background_north_atlantic_markland_village
+	}
+}
+
+RICE_theme_north_atlantic_vinland = {
+	icon = {
+		reference = "gfx/interface/icons/event_types/type_hunt.dds"
+	}
+	sound = {
+		reference = @generic_event_theme_sound
+	}
+	background = {
+		event_background = RICE_background_north_atlantic_vinland
+	}
+}
+
+RICE_theme_north_atlantic_vinland_village = {
+	icon = {
+		reference = "gfx/interface/icons/event_types/type_hunt.dds"
+	}
+	sound = {
+		reference = @generic_event_theme_sound
+	}
+	background = {
+		event_background = RICE_background_north_atlantic_vinland_village
+	}
+}
+
+RICE_theme_north_atlantic_iceland = {
+	icon = {
+		reference = "gfx/interface/icons/event_types/type_domain.dds"
+	}
+	sound = {
+		reference = @generic_event_theme_sound
+	}
+	background = {
+		event_background = RICE_background_north_atlantic_iceland
+	}
+}
+
+
+
+RICE_theme_north_atlantic_ruins = {
+	icon = {
+		reference = "gfx/interface/icons/event_types/type_domain.dds"
+	}
+	sound = {
+		reference = @generic_event_theme_sound
+	}
+	background = {
+		event_background = RICE_background_north_atlantic_ruins
+	}
+}
+
+
+RICE_theme_north_atlantic_vinland_outpost = {
+	icon = {
+		reference = "gfx/interface/icons/event_types/type_hunt.dds"
+	}
+	sound = {
+		reference = @generic_event_theme_sound
+	}
+	background = {
+		event_background = RICE_background_north_atlantic_vinland_outpost
+	}
+}
+
+
 
 

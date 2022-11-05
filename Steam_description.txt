@@ -1,23 +1,23 @@
-[img]https://i.imgur.com/5BSPJyp.jpg[/img]
+[img]https://i.imgur.com/BO8eZTM.jpg[/img]
 
-[h1]Current Version: 1.5.4 "Philae" (Released 3/27/22, Compatible with vanilla patch 1.5.X)[/h1]
+[h1]Current Version: 1.7.2.b Hotfix "Leif Erikson" (Released 10/30/22, Compatible with vanilla patch 1.7.X)[/h1]
 
-[h2]Newest Flavor Packs:
-Rhodes: Shadow of the Colossus & Upper Egypt: Children of the Nile
+[h2]Newest Flavor Pack:
+North Atlantic: From Iceland to Vinland
 Next Flavor Pack:
-Tarim Basin: Cities of the Silk Road[/h2]
+(TBD, somewhere in Eastern Europe)[/h2]
 
 [h1][B][url=https://discord.gg/9KuyXv2uZA]Discord Server for my mods[/url]
 [url=https://cybrxkhansmods.godaddysites.com/]Official Website for my mods[/url][/B][/h1]
 [B][url=https://forum.paradoxplaza.com/forum/threads/mod-regional-immersion-and-cultural-enrichment-a-cultural-flavor-pack-collection-sequel-to-cybrxkhans-immersion-packs.1431544/]Paradox Forum Thread[/url][/B]
 [B]Manual Download/Installation available [url=https://github.com/cybrxkhan/RICE-for-CK3/releases]on Github[/url]
 [/B]
-[B]Paradox Download [url=https://mods.paradoxplaza.com/mods/15338/Any]Available Here[/url][/B]
-[B][url=https://imgur.com/a/i1xYaJH]See All Preview Screenshots Here[/url][/B]
+[B][url=https://mods.paradoxplaza.com/mods/15338/Any]Paradox Plaza Download[/url][/B]
+[B][url=https://imgur.com/a/i1xYaJH]See More Preview Screenshots Here[/url][/B]
 
-RICE, or Regional Immersion and Cultural Enrichment, is a mod that adds immersion to different regions, cultures, and religions in CK3. As a spiritual successor to my Immersion Packs for CK2, it is a collection of "flavor packs" similar to PI's official flavor pack DLCs. The guiding philosophy of RICE is to keep a tight, focused scope that doesn’t change gameplay significantly, but adds more flavor across the world, especially for lesser-known places, peoples, and histories.
+RICE, or Regional Immersion and Cultural Enrichment, is a mod that adds immersion to different regions, cultures, and religions in CK3. As a spiritual successor to my Immersion Packs for CK2, it is a collection of "flavor packs" similar to PI's official flavor pack DLCs. RICE's guiding philosophy is to keep a focused scope that won't change gameplay significantly, but instead adds flavor across the world that is grounded in historical authenticity, especially for lesser-known places and peoples.
 
-[B][U]RICE IS IRONMAN COMPATIBLE BUT *NOT* ACHIEVEMENT COMPATIBLE. It works on existing saves, but some features will not appear on new saves.[/U][/B] (Also make a backup copy of your save just in case.)
+[B][U]RICE IS IRONMAN COMPATIBLE BUT *NOT* ACHIEVEMENT COMPATIBLE. It works on existing saves, but some features won't appear unless it's a new game.[/U][/B] (Also make a backup copy of your save just in case.)
 
 [B]Feel free to use my work in your mods[/B] - all I ask is that I am credited and (if possible) to give me a heads up. If you liked the mod, feel free to favorite and rate it up! 
 
@@ -25,32 +25,34 @@ RICE, or Regional Immersion and Cultural Enrichment, is a mod that adds immersio
 
 [img]https://i.imgur.com/U8RsI3I.jpg[/img]
 
-[B]RICE is designed with compatibility in mind, and runs fine with most mods - for more info on compatibility for various mods, please see [url=https://cybrxkhansmods.godaddysites.com/compatches]this webpage[/url][/B]. I avoid editing vanilla files to prevent conflicts with other mods. For example, new cultures are added via hidden events at game start instead of directly through province history.
-
-Special content is also provided if you're running with [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2243307127][B]The Fallen Eagle[/B][/url].
-
-There are known soft compatibility issues with some mods (i.e. wacky balance or weird behavior, rather than CTDs). Compatches are available for:
+[B]RICE is designed with compatibility in mind, and runs fine with most mods - for more info on compatibility for various mods, please see [url=https://cybrxkhansmods.godaddysites.com/compatibility]this webpage[/url][/B]. I avoid editing vanilla files to prevent conflicts with other mods. For example, new cultures are added via hidden events at game start instead of directly through province history. Compatches are available for:
 
 [LIST]
 [*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2553043828][B]Ethnicities and Portraits Expanded[/B][/url] (not required but ensures RICE uses new ethnicities).
 [*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2573060053][B]Unique Building Plus[/B][/url]
 [/LIST]
 
-[B]I WILL NOT maintain compatches for most mods that may need one[/B]. Feel free to make your own if you want (let me know so I can link it here). If you're a modder, don't hesitate to contact me on the forums or Discord about compatibility!
+Special content is also provided if you play with [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2243307127][B]The Fallen Eagle[/B][/url].
+
+[B]I WILL NOT maintain compatches for most mods that may need one[/B]. Feel free to make your own (let me know so I can link it here). If you're a modder, don't hesitate to contact me on the forums or Discord about compatibility!
 
 
 [img]https://i.imgur.com/2naeKQd.jpg[/img]
 
-Each RICE flavor pack adds features to a region, culture, or religion, that can range from new decisions to new buildings, dynasty legacies, and more, as well as generic flavor events and music. Please see the [url=https://cybrxkhansmods.godaddysites.com/flavor-pack-guides][B]Flavor Pack Guides[/B][/url] for more info on new features, tips and tricks, and selected lists of academic sources I used for further reading.
+Each RICE flavor pack adds features to a region, culture, or religion, that range from new decisions to new buildings, dynasty legacies, and more, as well as flavor events and music. Please see the [url=https://cybrxkhansmods.godaddysites.com/flavor-pack-guides][B]Flavor Pack Guides[/B][/url] for more info on new features, tips and tricks, and selected lists of academic sources I used for further reading.
 
-Currently available flavor packs include:
+The current [B]22[/B] flavor packs include:
 [LIST]
 [*]Aachen: Charlemagne's Capital
 [*]Brittany: The Western Duchy
 [*]Chios: Isle of Mastic
+[*]Galicia: The Way of Saint James
+[*]Granada: Memories of the Alhambra
 [*]Guanche: The Fortunate Isles
 [*]Harran: The Last Hellenic Pagans
 [*]Magadha: Diamond Throne of Buddhism
+[*]Nıger Delta: Heirs of Oduduwa
+[*]North Atlantic: From Iceland to Vinland
 [*]Pamir and Zunist: Roof of the World
 [*]Red Sea: Treasures of the Eastern Desert
 [*]Rhodes: Shadow of the Colossus
@@ -58,6 +60,7 @@ Currently available flavor packs include:
 [*]Siwa: Oases of the Western Desert
 [*]Socotra: Isle of Dragon's Blood
 [*]Sus: Door of the Sahara
+[*]Tarim Basin: Peoples of the Silk Road
 [*]Tuyuhun: Horsemen of Qinghai
 [*]Upper Egypt: Children of the Nile
 [*]Yazd: Abode of Worship
@@ -65,41 +68,68 @@ Currently available flavor packs include:
 [/LIST]
 
 [h1]Translations[/h1]
-RICE uses the normal English text as a placeholder so you won't see gibberish for other languages, except Korean, which has a submod.
+RICE uses the normal English text as a placeholder so you won't see gibberish for other languages, except Chinese and Korean, which have submods.
 [LIST]
-[*]Chinese - a team led by Jujiote has translated much of the mod
+[*]Chinese - please use [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2823178539][B]this submod by 牛奶大魔王[/B][/url] (thanks to Jujiote for the previous translations!)
 [*]French - several translators including Mouchi have translated parts of the mod
+[*]German - Dillo has translated much of the mod; Dani has a machine translation [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2877567899]sub-mod[/url], place it above in load order so it doesn't override Dillo's translations
 [*]Korean - please use [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2568582489][B]this submod by 티에[/B][/url]
 [/LIST]
 
 
 [img]https://i.imgur.com/hXy8Rv5.jpg[/img]
 
-[h1]Version 1.5.4 "Philae"[/h1]
+[h1]Version 1.7.2.b Hotfix for "Leif Erikson"[/h1]
 
+[LIST]
+[*]Added new CBs that are functionally identical to the county and ducal conquest CBs for rulers in the Greenland struggle to use on those outside the struggle, as a workaround for the issue where the CBs we're disabled, to avoid editing vanilla code
+[*]Added counties of North Riding (York), Dublin, and Middlesex (i.e. London) and the Duchy of Mann to the Greenland struggle region
+[*]Added Eeyou (East Cree) and Innu names (credits again to Lahom for finding Native American names for me)
+[*]Decision to explore Greenland is disabled for pre-medieval dates (like in TFE and WTWSMS)
+[*]Reduced the discount you get on the decision to explore Greenland if you took the Icelandic Althing decision/are of North Germanic or Goidelic heritage
+[*]Increased the base cost of the decision to explore Greenland to 250
+[*]Increased how much Resilience and Networks can potentially increase when taking the decision to Support Greenland
+[*]Reduced failure rate of Supporting Greenland to 20% (was previously 30%)
+[*]Support Greenland decision now clarifies how much Resilience and Networks can potentially increase for each type of support
+[*]Tweaked Resilience penalty for hunting trips to Nordsetur to be a bit more forgiving, especially for major and great hunts
+[*]Increased grace period between each Vinland outpost failure from one year to five years (i.e. during the grace period, outposts will not fail)
+[*]Reduced the impact of Viability on the chances of Vinland outposts failing - Viability now increases the chances at half rate normally, and a fifth rate after the Greenland struggle is resolved with a good ending (it’s still going to be tough) 
+[*]Reduced the chances of Vinland outposts failing if the Greenland struggle has been resolved with a good ending
+[*]Fixed Marginalization phase decreasing the chances of Vinland outposts failing instead of increasing it
+[*]Fixed Decision to Organize a Hunting Trip to Nordsetur not decreasing Resilience if you resolved the Greenland struggle with a good ending
+[*]Fixed localization error for the Decision to Explore the Seas West of Greenland
+[/LIST]
 
-[I]"Before Mandulis, son of Horus, by the hand of Nesmeterakhem, son of Nesmeter, the Second Priest of Isis, for all time and eternity. Words spoken by Mandulis, lord of the Abaton, great god."
+[h1]Version 1.7.2.a Hotfix for "Leif Erikson"[/h1]
 
-- Nesmeterakhem, Priest of Isis, 394 CE; last recorded hieroglyphic inscription in history[/I]
+[LIST]
+[*]Separated Native American heritages and languages in the code for some compatibility issues with Cultures Expanded and potentially other mods, like everyone getting the Native American decision or having no beards (this does not resolve CCU-related issues)
+[*]Added catalyst for the Greenland struggle when taking the decision to Incorporate Inuit Ideas
+[*]Added localization for Native American ethnicities
+[*]Changed culture colors to HSV values for languages for better compatibility with other mods
+[*]Decision to Send an Expedition to the West (and thus start the Greenland struggle) now requires having a capital in the struggle region, rather than just having any county in it
+[*]Decision to Convene Iceland’s First Althing now properly displays the requirement that your capital needs to be in Iceland
+[*]Both decisions to Establish Ivory Carving Centers no longer require needing a coastal county, and require having at least 10 development instead
+[*]Fixed missing lines of code in Native American ethnicities files (added in “using = finnish”)
+[/LIST]
+
+[I]“After being tossed about at sea for a long time, Leif chanced upon land where he had not expected any to be found. Fields of self-sown wheat and vines were growing there. [....] Leif converted the country [Greenland] to Christianity. Afterward he became known as Leif the Lucky.”
+
+- Two excerpts from the Saga of Erik the Red[/I]
 
 Please note some changes will only take effect with new games. Because changelog is too big to list here, please see the change notes here: https://steamcommunity.com/sharedfiles/filedetails/changelog/2273832430
 
 [LIST]
-[*]Behind the scenes effects now happen before a new game starts, meaning you can see it on the map! Thanks to Celticus for letting me know how it works
-[*]Popup event to choose to play Thabit ibn Qurra or his descendant Ibn Nabhan will now only trigger for the Caliph or whoever has Harran at game start
-[*]RICE New Playable Characters game rule renamed to RICE Starting Flavor Events
-[*]Added several playable historical Egyptian characters for 867 CE, including Tulunid officials and various rebels active at the time, and tweaked the starting situation
-[*]Integrated Honor Codes and Desert Poetry traditions from Henry's Better Bedouin mod - many thanks to Henry for generously offering me the code!
-[*]Added Himyarite namelist
-[*]Gave Ibn Tulun a few more children
-[*]Shukayr and Ibn Muddabir now start off as allies
-[*]Ibn Tulun starts off with the “Emmity Towards Ruthless Egyptian Officials” opinion modifier towards Shukayr and Ibn Muddabir, which allows him to imprison them and revoke titles
-[*]Shukayr and Ibn Muddabir start off with more gold, giving them both a chance to resist Ibn Tulun and to reflect their ruthless tax measures
-[*]Yeniseian culture now also has Forest Folk tradition
-[*]Peristani and Burusho cultures now have the Frequent Festivities traditions
-[*]Reduced bonuses for Children of the Nile tradition
-[*]Changed a few counties and rulers in the Pamir region from Mahayana to Theravada (based on historical Chinese sources): Wakhan, Khuttal, East and West Tokharistan, Kapisi
-[*]Moved Amazigh holy site of Ahaggar to Djanet due to it potentially causing inheritance issues
+[*]Added North Atlantic Flavor Pack: From Iceland to Vinland
+[*]Added 3 Renaissance, 4 Norse, and 1 Celtic themed soundtracks
+[*]Added a few loading screens
+[*]Added a lot of new German translations (thanks to Dillo234 again!)
+[*]Armies from Silk Road Communities are no longer inheritable
+[*]Celtic music now also plays in a slightly broader range in Northern Europe
+[*]Reduced chances AI will take decision to Request a Coronoation by the Ọọ̀ni (to prevent spam in the mid to late game)
+[*]Uncrowned by Ooni modifier will no longer be given to Baron-tier characters
+[*]Baron-tier characters can no longer take the decision to Request a Coronoation by the Ọọ̀ni (to prevent spam in the mid to late game)
+[*]Fixed Lop Nur announcement event triggering globally (for TFE and early start dates)
 [*]Miscellaneous bugfixes
 [/LIST]
 
@@ -116,12 +146,26 @@ Please note some changes will only take effect with new games. Because changelog
 
 [img]https://i.imgur.com/mAZYIrS.jpg[/img]
 
-Thanks to all I worked with, took stuff from, and provided me encouragement and feedback over the years. A few shoutouts in particular:
+Thanks to all I worked with, took stuff from, and provided me encouragement and feedback over the years. Huge thanks also to the kind souls who take the time to translate the mod and put up with my erratic update schedule.
+
+Special thanks in particular to:
 
 [LIST]
-[*]B7E7 for the Amazigh religion/faith and Guanche culture code from BlackEmperor's Africa Plus
+[*]B7E7 for collaboration and various cultures/faiths from BlackEmperor's Africa Plus
+[*]Bonseny for the amazing VIET and RICE logos and the beautiful 3D art assets
+[*]Celticus for a lot of useful help and suggestions
+[*]George Hammond for some music ([url=https://fanlink.to/georgehammondmusic]see here[/url] for more of his work)
+[*]Shatzi for more Breton content
+[/LIST]
+
+Thanks also to:
+
+[LIST]
 [*]Fische for the Dragon Blood art icon and Vertimnus for donating it to me (originally made for Sinews of War)
 [*]Henry for the Better Bedouin Culture mod
+[*]Lahom for most of the Native American names
 [*]Nezaros for reformed religion template
+[*]Nix for Evenki names
+[*]PinkPanzer for some decision art
 [*]The Not So Lonely Arrikirri and Tundragrass for suggestions and sources on the Zunbils
 [/LIST]

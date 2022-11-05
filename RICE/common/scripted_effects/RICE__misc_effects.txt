@@ -1,192 +1,45 @@
 ﻿###############################################################################
 # 
-# Game Start Effects
+# Miscellaneous Effects
 # 
 ###############################################################################
 
-# Few special cases where characters will NOT be landed unless the player chooses to
-RICE_setup_character_picker_effect = {
-
+# This is literally needed for the error log to not show this message, even though it literally does nothing and wastes space
+RICE_setup_no_modifier_or_variable_silliness_effect = {
 	if = {
 		limit = {
-			#start_date = 867.1.1	
-			current_date < 900.1.1
-			current_date > 850.1.1		
-		}
-		# Play as Thabit ibn Qurra
-		every_player = {
-			limit = {
-				OR = {
-					has_title = title:c_harran
-					has_title = title:d_sunni
-				}
-				
+			OR = {
+				# Normal modifiers
+				has_character_modifier = RICE_yazd_sebuk_eri
+				has_character_modifier = RICE_harran_historical_last_of_the_harranians
+				has_character_modifier = RICE_harran_historical_ibn_nabhan
+				has_character_modifier = RICE_robber_baron
+				# These modifiers are literally used in the code to create court artifacts but the error log still thinks they're unused, go figure
+				has_character_modifier = RICE_niger_delta_art_court_bronze_modifier
+				has_character_modifier = RICE_niger_delta_art_court_iron_modifier
+				has_character_modifier = RICE_niger_delta_art_court_ivory_modifier
+				has_character_modifier = RICE_niger_delta_art_court_wood_modifier
+				has_character_modifier = RICE_niger_delta_art_court_excellent_bronze_modifier
+				has_character_modifier = RICE_niger_delta_art_court_excellent_iron_modifier
+				has_character_modifier = RICE_niger_delta_art_court_excellent_ivory_modifier
+				has_character_modifier = RICE_niger_delta_art_court_excellent_wood_modifier
+				# Global Variables
+				has_global_variable = RICE_greenland_ending_abandonment
+				has_global_variable = RICE_greenland_auto_fail_chances
+				has_global_variable = RICE_vinland_viability_chances
+				has_global_variable = RICE_global_walrus_hunt_minor_cost
+				has_global_variable = RICE_global_walrus_hunt_major_cost
+				has_global_variable = RICE_global_walrus_hunt_great_cost
+				has_global_variable = RICE_global_walrus_hunt_min_gain
+				has_global_variable = RICE_global_walrus_hunt_minor_max_gain
+				has_global_variable = RICE_global_walrus_hunt_major_max_gain
+				has_global_variable = RICE_global_walrus_hunt_great_max_gain
+				# Variables
+				has_variable = RICE_viability_value_temp
 			}
-			trigger_event = harran.0040
 		}
 	}
-
-	if = {
-		limit = {
-			#start_date = 1066.9.15	
-			current_date < 1100.1.1
-			current_date > 1000.1.1		
-		}
-		# Play as Ibn Nabhan
-		every_player = {
-			limit = {
-				OR = {
-					has_title = title:c_harran
-					has_title = title:d_sunni
-				}
-				
-			}
-			trigger_event = harran.0060
-		}
-	}
-
 }
-
-RICE_setup_optional_flavor_events_effect = {
-
-	if = {
-		limit = {
-			#start_date = 867.1.1	
-			current_date < 900.1.1
-			current_date > 850.1.1	
-		}
-
-		# Pamir chieftains
-		character:RICE_pamir_001 = { # Puteshan
-			trigger_event = pamir.0007
-		}
-		character:RICE_pamir_002 = { # Wakhan
-			trigger_event = pamir.0007
-		}
-		character:RICE_pamir_003 = { # Shugnan
-			trigger_event = pamir.0007
-		}
-		character:RICE_pamir_004 = { # Munjan
-			trigger_event = pamir.0007
-		}
-
-		# Zunbils
-		character:188710 = { 
-			trigger_event = pamir.0017
-		}
-		character:188712 = { 
-			trigger_event = pamir.0017
-		}
-
-		# Saffarid situation
-		character:163101 = { # Saffirds and vassals
-			trigger_event = yazd.0002
-			every_vassal_or_below = {
-				limit = { # Ignore the Zunbil, who gets his own unique text
-					NOT = { has_title = title:c_bost }
-				}
-				trigger_event = yazd.0002
-			}
-		}
-		character:163100 = { # Tahirids and vassals
-			trigger_event = yazd.0002
-			every_vassal_or_below = {
-				trigger_event = yazd.0002
-			}
-		}
-		# Abd-al-Rahman, Kharijite rebel in Herat c. 872
-		character:RICE_yazd_004 = {
-			trigger_event = yazd.0004
-		}
-		# Esmail ibn Musa, last leader of the Kharijite remnants in Bam
-		character:RICE_yazd_001 = {
-			trigger_event = yazd.0004
-		}
-
-		# Tulunid/Egypt situation
-		character:163115 = { # Tulunids and vassals
-			trigger_event = upper_egypt.0001
-			every_vassal_or_below = {
-				trigger_event = upper_egypt.0001
-			}
-		}
-		character:RICE_upper_egypt_013 = { # Ibn al-Sufi and vassals
-			trigger_event = upper_egypt.0001
-			every_vassal_or_below = {
-				trigger_event = upper_egypt.0001
-			}
-		}
-		character:RICE_upper_egypt_012 = { # al-Tabataba
-			trigger_event = upper_egypt.0001
-		}
-
-	}
-
-	# if = {
-	# 	limit = {
-	# 		#start_date = 1066.9.15	
-	# 		current_date < 1100.1.1
-	# 		current_date > 1000.1.1			
-	# 	}
-	# }
-
-}
-
-RICE_setup_non_optional_flavor_events_effect = {
-
-	if = {
-		limit = {
-			#start_date = 867.1.1	
-			current_date < 900.1.1
-			current_date > 850.1.1	
-		}
-		# al-Umari
-		character:bedouin0018 = {
-			trigger_event = red_sea.0020
-		}
-		# Azur Jamshid
-		character:RICE_pamir_013 = { # Azur Jamshid
-			trigger_event = pamir.0013
-		}
-	}
-
-	if = {
-		limit = {
-			#start_date = 1066.9.15	
-			current_date < 1100.1.1
-			current_date > 1000.1.1			
-		}
-		# Nur Kayani, Azur Jamshid's descendant
-		character:RICE_pamir_021 = {
-			trigger_event = pamir.0016
-		}
-		# Ali ibn Asad
-		character:RICE_pamir_006 = {
-			trigger_event = pamir.0009
-		}
-		# Kakuyids
-		character:1231053 = {
-			remove_trait = deceitful 	# Let the player choose between deceitful and content
-			trigger_event = yazd.0005
-		}
-		# Qawurd/Qavort, senior Seljuk Prince
-		character:3041 = {
-			trigger_event = yazd.0008
-		}
-	}
-
-}
-
-
-
-
-
-###############################################################################
-# 
-# Misc Effects
-# 
-###############################################################################
-
 
 
 RICE_remove_education_traits_effect = {
@@ -532,4 +385,18 @@ RICE_generate_small_family_as_ruler = {
 	}
 }
 
+
+# These cause errors for some reason even though they seem to work fine...?
+RICE_jizya_contract_at_start_effect = {
+	vassal_contract_set_obligation_level = {
+		type = jizya_special_rights
+		level = 1
+	}
+}
+RICE_no_conversion_contract_at_start_effect = {
+	vassal_contract_set_obligation_level = {
+		type = religious_rights
+		level = 1
+	}
+}
 

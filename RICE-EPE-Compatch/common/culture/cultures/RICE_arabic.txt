@@ -10,7 +10,7 @@
 		tradition_quarrelsome
 		tradition_fishermen
 		tradition_maritime_mercantilism
-		tradition_RICE_ubiquity_of_poetry
+		#tradition_RICE_ubiquity_of_poetry
 	}
 	
 	name_list = name_list_south_arabian
@@ -155,8 +155,6 @@
 		3 = indian_dravidian_15
 	}
 }
-
-
 
 himyarite = {
 	color = { 0.53 0.66 0.56 }

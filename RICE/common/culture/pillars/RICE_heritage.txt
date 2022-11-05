@@ -9,4 +9,3 @@ heritage_east_bantu = {
 heritage_guanche = {
 	type = heritage
 }
-
